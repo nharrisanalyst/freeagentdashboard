@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Free Agency DashBoard</title>
+  <style type="text/css">
+   .text{
+   		font-family: Sans-Serif;
+   		font-size: 11px;
+   
+   
+   }
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.line{
+ fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.chartText{
+	font-family: sans-serif;
+    font-size: 11px;
+
+}
+
+#chord{
+  float:left;
+
+
+
+}
+#wrapperButton {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    
+}
+
+
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  	<div id="wrapperButton"><button onclick= "ws()" id="ws" class="buttons"> Win Share</button>
+  	<button onclick= "dollars()" id = "dollars" class= "buttons">$Dollars</button></div>
+   <div id="wrapper">
+   
+   	 	<div id="chord"></div> 
+    	<div id = "chart"></div>
+   </div>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  
+ 
+  <script src="freeAgentDash.js"></script>
+  
+  
+  
+  
+
+  
+  </body>
+</html>
