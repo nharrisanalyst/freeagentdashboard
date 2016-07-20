@@ -6,6 +6,7 @@ window.mobileAndTabletcheck = function() {
   return check;
 };
 
+var check = window.mobileAndTabletcheck();
 
 
 var margin = {top: 30, left:50, bottom:20, right:20};
