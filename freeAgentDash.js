@@ -53,7 +53,7 @@ var chartTool= function(d){
 		container:"#chart",
 		 trigger: "manual",
 		 html: true,
-		 content: function(){ return "Player: "+ d.Player+"<br> Old Team: " +d.OTm+"</br> New Team: " +d.NTm+"<br> Contract : " +d.Term+ " for " +d.Dollars+"M</br>WS Last Year: "+d.WS}
+		 content: function(){ return "Player: "+d.Player_F+" " +d.Player_L+"<br> Old Team: " +d.OTm+"</br> New Team: " +d.NTm+"<br> Contract : " +d.Terms+ " for " +d.Dollars+"M</br>WS Last Year: "+d.WS}
 		 
 		
 		});
@@ -385,6 +385,7 @@ chartWrapper.selectAll("circle")
 			.attr("cy", function(d,i){return yScale(d.NTm)})
 			.attr("cx", function(d){return xScale(d.Dollars)})
 			.attr("r", 2.5)
+			.attr("id",function(d){ return d.Player_F+d.Player_L})
 			.style("fill", function(d){ return fill(teamIndex[d.NTm])})
 			.on("mouseover",chartTool)
 			.on("mouseout",chartToolOut);
@@ -514,7 +515,25 @@ chartWrapper.select(".chartText")
 
 }
 
+function reset(){
 
+
+d3.selectAll("circle").transition().style("opacity",1).attr("r",2).style("stroke",function(d){ return fill(teamIndex[d.NTm])});
+
+
+}
+
+//search button
+
+function search(){
+console.log($('#searchR').val());
+
+var id = "#"+$('#searchR').val();
+d3.select(id).transition().attr("r",6).style("stroke","black");
+console.log(d3.select("circle:not(" + id + ")"))
+d3.selectAll("circle:not(" + id + ")").transition().style("opacity",0.01);
+d3.select("#chart").on("click",reset);
+}
 
 
 

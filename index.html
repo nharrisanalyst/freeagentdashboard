@@ -101,14 +101,14 @@ d3.csv("Data/freeAgencyData.csv", function(error, csv){
   var selections = ""; 
   
   for(var i=0; i<dataP.length; i++){
-  			selections+="<option value='"+dataP[i].Player+"'>"+dataP[i].Player+"</option>"
+  			selections+="<option value='"+dataP[i].Player_F+""+dataP[i].Player_L+"'>"+dataP[i].Player_F+" "+dataP[i].Player_L+"</option>"
   			
   			}; 
   
   
   
   
-  d3.select("#search").html("Search for Player <select name='players'>"+selections+"</select>  <button>Submit</button>") 
+  d3.select("#search").html("Search for Player <select id='searchR' name='players'>"+selections+"</select>  <button onclick= 'search()'>Submit</button>") 
    
   }); 
    </script>
