@@ -529,7 +529,11 @@ function search(){
 console.log($('#searchR').val());
 
 var id = "#"+$('#searchR').val();
-d3.select(id).transition().attr("r",6).style("stroke","black");
+d3.select(id).transition().attr("r",6).style({"stroke":"black",
+												"opacity":1
+
+
+															});
 console.log(d3.select("circle:not(" + id + ")"))
 d3.selectAll("circle:not(" + id + ")").transition().style("opacity",0.01);
 d3.select("#chart").on("click",reset);

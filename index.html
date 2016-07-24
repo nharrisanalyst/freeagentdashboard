@@ -63,17 +63,69 @@ background-color: #e3e1e1;
 
 }
 
+
+#title{
+ font-size:150px;
+ text-align:center;
+
+
+
+}
+
+#intro, #two, #three, #left, #right{
+visibility:visible;
+
+font-size : 20px;
+width: 700px;
+margin-right: auto; margin-left: auto;
+text-align:center;
+margin-bottom:40px;
+    
+}
+
   </style>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   </head>
   <body id ="body">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  	
+  	
+  	
+  	<div id = "title"> Free Agency Dashboard</div>
+ 
+  	<div id="intro">
+  		
+  		This year's free agency has been absolutely insane. This Summer's NBA Free Agency has made everyone wish that they where 6'10" and could shoot .400% from the three point line,
+  		becuase in today's NBA free agency market you would be making a minimum of 20 million dollars a years. (yes I said "A Year").
+  </div>
+  
+  <div id = "two">
+   The NBA's Salary cap jumped 24 million dollars this offseason from 70 million dollars to 94 million dollars a 34.3% singular jump.
+   The Salary cap jump gave owners an extra <b>720 million per year</b> to spend. In total NBA owners have signed contracts worth <b>3.44 billion</b> dollars in contracts. 
+  </div>
+  
+  <div id="three">
+  	This is a free agency dashboard that lets you easily visualize every single free agency transaction quickly.
+  	</div>
+  	<div id="left">On the left is a chord diagram that allows you to easily see the flow of NBA free agents, and their movement between teams.
+  	</div>
+  	<div id="right">On the Right is a chart where you can discover every single individual free agent signing this offseason. I made it searchable too. Scroll over the chart to 
+  	discover exactly where a player has moved too and what his contract is.
+  </div>
+  	
+  	
+  	
   	<div id="wrapperButton"><button onclick= "ws()" id="ws" class="buttons"> Win Share</button>
   	<button onclick= "dollars()" id = "dollars" class= "buttons">$Dollars</button></div>
    
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+
+
   <div id="search"></div> 
   
    
@@ -89,7 +141,7 @@ background-color: #e3e1e1;
   <script src="freeAgentDash.js"></script>
   
    <script>   
-  // input
+  // input for the search bar
  
   
 
@@ -118,7 +170,7 @@ d3.csv("Data/freeAgencyData.csv", function(error, csv){
   }); 
    </script>
   
-  
+  <script src="freeagenttext.js"></script>
 
   
   </body>
