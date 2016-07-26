@@ -46,7 +46,7 @@ d3.select("#two").transition().style("visibility","hidden");
 })
 
 var scene3 = new ScrollMagic.Scene({
-					offset:1000,
+					offset:1500,
 					triggerElement: "#left"
 					
 
