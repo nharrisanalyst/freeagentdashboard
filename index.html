@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+  <!-- twitter meta data -->
+<meta name="twitter:card" content="NBA 2016 FreeAgency Data Visualization/Dashboard" />
+<meta name="twitter:site" content="@nathaniharris" />
+<meta name="twitter:creator" content="@nathaniharris" />
+<meta property="og:url" content="https://nharrisanalyst.github.io/freeagentdashboard/" />
+<meta property="og:title" content="A NBA Free Agency Dashboard/ Data Visualization" />
+<meta property="og:description" content="A Dashboard/ Visualization that allows you to discover the flow of NBA free agent player throughout the NBA and NBA player indivdual contracts by Dollars and Win Share" />
+<meta property="og:image" content="https://c1.staticflickr.com/9/8305/28539898286_9d38677906_b.jpg" />
+
+<!-- facebook meta data -->
+
+<meta property="og:url"           content="https://nharrisanalyst.github.io/freeagentdashboard/" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="A NBA Free Agency Dashboard/ Data Visualization" />
+	<meta property="og:description"   content="A Dashboard/ Visualization that allows you to discover the flow of NBA free agent player throughout the NBA and NBA player indivdual contracts by Dollars and Win Share" />
+	<meta property="og:image"         content="https://c1.staticflickr.com/9/8305/28539898286_9d38677906_b.jpg" />
     <meta charset="UTF-8">
     <title>Free Agency DashBoard</title>
     
@@ -104,6 +121,14 @@ float: right;
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   </head>
   <body id ="body">
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -193,6 +218,6 @@ d3.csv("Data/freeAgencyData.csv", function(error, csv){
   
   <script src="freeagenttext.js"></script>
 
-  <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script><div class="fb-share-button" data-href="https://nharrisanalyst.github.io/freeagentdashboard/" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnharrisanalyst.github.io%2Ffreeagentdashboard%2F&amp;src=sdkpreparse">Share</a></div>
   </body>
 </html>
