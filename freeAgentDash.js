@@ -398,13 +398,22 @@ chartWrapper.append("line")
 				"y1":0,
 				"y2":10
 			});
+if(check){
+chartWrapper.append("text")
+			.attr("class", "chartText")
+			.attr("transform", "translate(225,11)")
+			.text("$Dollars (in Millions)")
+			
+			;
 
+
+}else{
 chartWrapper.append("text")
 			.attr("class", "chartText")
 			.attr("transform", "translate(335,11)")
 			.text("$Dollars (in Millions)")
 			
-			;
+			;}
 
 })
 
@@ -454,7 +463,18 @@ chartWrapper.selectAll("circle")
 			.attr("cx", function(d){return xScale(d.WS)})
 			
 			
+if(check){
+chartWrapper.select(".chartText")
+			.transition()
+			.duration(1500)
+			.attr("transform", "translate(260,11)")
+			.text("Win Share")
+			
+			;
 
+
+
+}else{
 
 chartWrapper.select(".chartText")
 			.transition()
@@ -463,7 +483,7 @@ chartWrapper.select(".chartText")
 			.text("Win Share")
 			
 			;
-
+}
  		
 }
 
@@ -502,14 +522,25 @@ chartWrapper.selectAll("circle")
 			.attr("cx", function(d){return xScale(d.Dollars)})
 			
 			
+if(check){
 
+chartWrapper.select(".chartText")
+			.transition()
+			.duration(1500)
+			.attr("transform", "translate(225,11)")
+			.text("$Dollars (in Millions)");
+
+
+
+
+}else{
 
 chartWrapper.select(".chartText")
 			.transition()
 			.duration(1500)
 			.attr("transform", "translate(335,11)")
 			.text("$Dollars (in Millions)");
-
+}
 
 
 
